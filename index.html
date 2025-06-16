@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta charset="utf-8" />
+<title>RoryZL896's Tools</title>
+<meta name="keywords" content="RoryZL896,Tools,Developers,MD5" />
+<meta name="description" content="tools for developer or people in need" />
+</head>
+<body>
+    <h1>RoryZL896's Tools</h1>
+    <p>tools for developer or people in need</p>
+    <div class="hash">
+        <h2>Hash</h2>
+        <p>
+            <div>
+                <input type="text" name="source" placeholder="Plain text" />
+            </div>
+            <div>
+                <select name="type">
+                    <option value="md5">MD5</option>
+                    <option value="sha1">SHA-1</option>
+                    <option value="sha256">SHA-256</option>
+                    <option value="sha512">SHA-512</option>
+                    <option value="sha3">SHA-3</option>
+                    <option value="ripemd160">RIPEMD-160</option>
+                </select>
+            </div>
+            <div>
+                <input type="button" name="convert" value="Convert" />
+            </div>
+            <div class="result"></div>
+            <div>
+                <input type="button" name="copy" value="Copy" />
+            </div>
+        </p>
+    </div>
+    <script type="text/javascript" src="./js/crypto-4.2.0.min.js"></script>
+    <script type="text/javascript" src="./js/hash.js?v=1"></script>
+</body>
+</html>
