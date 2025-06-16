@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', (ex) => {
     const type = hash.querySelector('select[name=type]');
     const result = hash.querySelector('.result');
     const copyButton = hash.querySelector('input[type=button][name=copy]');
+    const upperButton = hash.querySelector('input[type=button][name=upper]');
+    const lowerButton = hash.querySelector('input[type=button][name=lower]');
     convertButton.addEventListener('click', async (e) => {
         const data = text.value.trim();
         if (data == '') {
@@ -30,6 +32,12 @@ document.addEventListener('DOMContentLoaded', (ex) => {
     }, false);
     copyButton.addEventListener('click', async (e) => {
         copyText(result.innerHTML);
+    }, false);
+    upperButton.addEventListener('click', async (e) => {
+        result.innerHTML = result.innerHTML.toUpperCase();
+    }, false);
+    lowerButton.addEventListener('click', async (e) => {
+        result.innerHTML = result.innerHTML.toLowerCase();
     }, false);
 });
 async function copyText(text) {
