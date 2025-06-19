@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', (ex) => {
+core.ready(() => {
     const hash = document.querySelector('.hash');
     const convertButton = hash.querySelector('input[type=button][name=convert]');
     const text = hash.querySelector('input[type=text]');

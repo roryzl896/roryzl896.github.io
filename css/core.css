@@ -1,0 +1,282 @@
+:root {
+    --color-primary: #0B0B0B;
+    --color-second: #2B2B2B;
+    --color-third: #777777;
+    --color-border: #DEDEDE;
+    --color-ground: #F8F8F8;
+    --color-back: #FEFEFE;
+}
+[data-theme='dark'] {
+    --color-primary: #FEFEFE;
+    --color-second: #F8F8F8;
+    --color-third: #999999;
+    --color-border: #464646;
+    --color-ground: #2B2B2B;
+    --color-back: #3C3C3C;
+}
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) var(--color-back);
+    letter-spacing: 1px;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* 防止边框塌陷 */
+    min-width: 0;
+    min-height: 0;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--color-back);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-second);
+    border-radius: 4px;
+}
+html {
+    /* 修复iOS点击高亮问题 */
+    -webkit-tap-highlight-color: transparent;
+    /* 平滑滚动 */
+    scroll-behavior: smooth;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    transition: background-color 0.5s, color 0.5s;
+    color: var(--color-second);
+    background-color: var(--color-ground);
+    font-size: var(--size-font);
+}
+a, p, div, i, span {
+    line-break: anywhere;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 6px 14px;
+    background: transparent;
+    color: var(--color-second);
+    border: 1px solid var(--color-border);
+    border-radius: var(--size-radius);
+    /* transition: background-color 0.5s, color 0.5s; */
+    transition: all 0.5s ease;
+}
+button:hover, input:hover, optgroup:hover, select:hover, textarea:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary);
+}
+button:focus, input:focus, optgroup:focus, select:focus, textarea:focus {
+    outline: none;
+}
+button:active, input[type=button]:active, input[type=submit]:active, input[type=reset]:active {
+    transform: translate(4px, 4px);
+}
+input, optgroup, select, textarea {
+    width: 100%;
+}
+button, [type='button'], [type='reset'], [type='submit'], [type='checkbox'], [type='radio'] {
+    width: auto;
+}
+button, [type='button'], [type='reset'], [type='submit'] {
+    -webkit-appearance: button;
+    background: none;
+    cursor: pointer;
+}
+input[type='search'], input[type='text'] {
+    -webkit-appearance: none;
+}
+ul, ol {
+    list-style: none;
+}
+dl, dd {
+    margin: 0;
+}
+nav, ul {
+    margin: 0;
+    padding: 0;
+}
+img {
+    border-style: none;
+    vertical-align: middle;
+    height: auto;
+}
+svg:not([fill]) {
+    fill: currentColor;
+}
+audio, video {
+    max-width: 100%;
+    max-height: auto;
+    object-fit: fill;
+}
+dialog {
+    margin: auto;
+    padding: 1em;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-back);
+    border-radius: 4px;
+}
+dialog[open] {
+    transition: 0.3s allow-discrete;
+    opacity: 1;
+    transform: scale(1);
+    @starting-style {
+        opacity: 0;
+        transform: scale(0.7); 
+    }
+}
+dialog:not([open]) {
+    transition: 0.3s allow-discrete;
+    opacity: 0;
+    transform: scale(0.7);
+    @starting-style {
+        opacity: 1;
+        transform: scale(1); 
+    }
+}
+a {
+    color: var(--color-second);
+    text-decoration: none;
+    position: relative;
+    display: block;
+    transition-duration: 0.3s;
+}
+a:hover, a.active, .active a, a .active {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+a, button, input, select, textarea {
+    touch-action: manipulation;
+}
+img, a {
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+img {
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+}
+img:hover {
+    border-color: var(--color-primary);
+}
+input[type='radio'], input[type='checkbox'] {
+    min-width: 16px;
+    min-height: 16px;
+    display: none;
+}
+input[type='radio'] + label, input[type='checkbox'] + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: var(--size-font);
+    transition: all 0.5s ease;
+}
+input[type='radio'] + label.blank, input[type='checkbox'] + label.blank {
+    padding-left: 0px;
+    width: 26px;
+    height: 26px;
+    margin: 0px auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+}
+input[type='radio'] + label:before, input[type='checkbox'] + label:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--color-second);
+    background-color: var(--color-back);
+    transition: all 0.5s ease;
+}
+input[type='radio'] + label:before {
+    border-radius: 50%;
+}
+input[type='checkbox'] + label:before {
+    border-radius: var(--size-radius);
+}
+input[type='radio']:checked + label:before, input[type='checkbox']:checked + label:before {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+input[type='radio'] + label:after, input[type='checkbox'] + label:after {
+    display: block;
+    transition: all 0.5s ease;
+}
+input[type='radio']:checked + label:after, input[type='checkbox']:checked + label:after {
+    content: '\2713';
+    font-size: 14px;
+    color: var(--color-back);
+    position: absolute;
+    top: 0px;
+    left: 6px;
+}
+[contenteditable]:focus {
+    outline: none;
+}
+input::-webkit-search-cancel-button {
+    display: none;
+}
+.list, .view {
+    overflow-x: auto;
+}
+.list table tr:first-child, .list table tr:nth-child(odd), .list table tr:hover, .view table tr th {
+    background-color: var(--color-ground);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+table, th, td, .table, .table .tr, .table .th, .table .td {
+    border: 1px solid var(--color-border);
+}
+table th, .table .th {
+    height: 36px;
+}
+table td, .table .td {
+    height: 32px;
+}
+table th, table td, .table .th, .table .td {
+    padding: 4px;
+    vertical-align: middle;
+}
+@media print {
+    /* 打印时的颜色和背景处理 */
+    * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      color-adjust: exact;
+    }
+    /* 避免打印时断页问题 */
+    a {
+      page-break-inside: avoid;
+    }
+    /* 确保打印时显示完整的URL */
+    a[href^="http"]::after {
+      content: " (" attr(href) ")";
+    }
+}
