@@ -12,7 +12,8 @@ core.ready(() => {
         }
         try {
             const jsonObject = JSON.parse(source);
-            const compressJson = compressJSON.compress(jsonObject);
+            // const compressJson = compressJSON.compress(jsonObject);
+            const compressJson = JSON.stringify(jsonObject);
             targetInput.value = compressJson;
         } catch(e) {
             console.error('error', e);
@@ -26,7 +27,8 @@ core.ready(() => {
         }
         try {
             const jsonObject = JSON.parse(source);
-            const decompressJson = compressJSON.decompress(jsonObject);
+            // const decompressJson = compressJSON.decompress(jsonObject);
+            const decompressJson = JSON.stringify(jsonObject, null, '\t');
             targetInput.value = decompressJson;
         } catch(e) {
             console.error('error', e);
