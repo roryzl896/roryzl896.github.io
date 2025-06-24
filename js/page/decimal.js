@@ -1,9 +1,9 @@
 core.ready(() => {
-    const json = document.querySelector('.json');
-    const sourceInput = json.querySelector('textarea[name=source]');
-    const targetInput = json.querySelector('textarea[name=target]');
-    const typeInput = json.querySelector('select[name=type]');
-    const convertButton = json.querySelector('button[name=convert]');
+    const decimal = document.querySelector('.decimal');
+    const sourceInput = decimal.querySelector('textarea[name=source]');
+    const targetInput = decimal.querySelector('textarea[name=target]');
+    const typeInput = decimal.querySelector('select[name=type]');
+    const convertButton = decimal.querySelector('button[name=convert]');
     convertButton.addEventListener('click', async (e) => {
         const source = sourceInput.value.trim();
         if (source == '') {
