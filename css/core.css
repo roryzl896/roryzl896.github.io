@@ -5,6 +5,8 @@
     --color-border: #DEDEDE;
     --color-ground: #F8F8F8;
     --color-back: #FEFEFE;
+    --size-radius: 4px;
+    --size-space: 12px;
 }
 [data-theme='dark'] {
     --color-primary: #FEFEFE;
@@ -263,6 +265,20 @@ table td, .table .td {
 table th, table td, .table .th, .table .td {
     padding: 4px;
     vertical-align: middle;
+}
+.wrap {
+    margin: 0px auto;
+    padding: 0px var(--size-space);
+}
+.box {
+    border: 1px solid var(--color-border);
+    background-color: var(--color-back);
+    border-radius: var(--size-radius);
+    padding: var(--size-space);
+    overflow: hidden;
+}
+.box.active, .box.hover:hover {
+    box-shadow: 0 0 0 2px var(--color-primary);
 }
 @media print {
     /* 打印时的颜色和背景处理 */

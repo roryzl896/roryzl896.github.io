@@ -8,16 +8,64 @@ published: true
 
 <div class="decimal">
     <h2>Decimal conversion</h2>
-    <button type="button" name="convert">Convert</button>
-    <select name="type">
-        <option value="2">2</option>
-        <option value="8">8</option>
-        <option value="10">10</option>
-        <option value="16">16</option>
-        <option value="32">32</option>
-        <option value="48">48</option>
-    </select>
+    <div>
+        <label>
+            <input type="radio" name="sourceType" value="0" checked />
+            <span>Text</span>
+        </label>
+        <label>
+            <input type="radio" name="sourceType" value="2" />
+            <span>2</span>
+        </label>
+        <label>
+            <input type="radio" name="sourceType" value="8" />
+            <span>8</span>
+        </label>
+        <label>
+            <input type="radio" name="sourceType" value="10" />
+            <span>10</span>
+        </label>
+        <label>
+            <input type="radio" name="sourceType" value="16" />
+            <span>16</span>
+        </label>
+        <label>
+            <input type="radio" name="sourceType" value="32" />
+            <span>32</span>
+        </label>
+        <label>
+            <input type="radio" name="sourceType" value="36" />
+            <span>36</span>
+        </label>
+    </div>
     <textarea name="source"></textarea>
+    <div>
+        <label>
+            <input type="radio" name="targetType" value="2" checked />
+            <span>2</span>
+        </label>
+        <label>
+            <input type="radio" name="targetType" value="8" />
+            <span>8</span>
+        </label>
+        <label>
+            <input type="radio" name="targetType" value="10" />
+            <span>10</span>
+        </label>
+        <label>
+            <input type="radio" name="targetType" value="16" />
+            <span>16</span>
+        </label>
+        <label>
+            <input type="radio" name="targetType" value="32" />
+            <span>32</span>
+        </label>
+        <label>
+            <input type="radio" name="targetType" value="36" />
+            <span>36</span>
+        </label>
+    </div>
+    <button type="button" name="convert">Convert</button>
     <textarea name="target"></textarea>
 </div>
 <script src="/js/page/decimal.js?v=0.1"></script>
