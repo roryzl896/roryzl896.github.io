@@ -1,11 +1,10 @@
 core.ready(() => {
     const decimal = document.querySelector('.decimal');
     const sourceInput = decimal.querySelector('textarea[name=source]');
-    const sourceTypeInput = decimal.querySelector('input[name=sourceType]');
     const targetInput = decimal.querySelector('textarea[name=target]');
-    const targetTypeInput = decimal.querySelector('input[name=targetType]');
     const convertButton = decimal.querySelector('button[name=convert]');
     convertButton.addEventListener('click', async (e) => {
+        const sourceTypeInput = decimal.querySelector('input[name=sourceType]:checked');
         const sourceType = sourceTypeInput.value.trim();
         if (sourceType == '') {
             alert('Please select converted type');
@@ -27,6 +26,7 @@ core.ready(() => {
             alert('Please input converted data');
             return;
         }
+        const targetTypeInput = decimal.querySelector('input[name=targetType]:checked');
         const targetType = targetTypeInput.value.trim();
         if (targetType == '') {
             alert('Please select converting type');
