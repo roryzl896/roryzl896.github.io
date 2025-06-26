@@ -7,9 +7,11 @@ published: true
 ---
 
 <div class="box decimal">
-    <h2>Decimal conversion</h2>
-    <form method="get">
-        <div>
+    <form method="get" class="rows in">
+        <div class="row">
+            <h1>Decimal conversion</h1>
+        </div>
+        <div class="row">
             <label>
                 <input type="radio" name="sourceType" id="sourceType0" value="0" checked />
                 <label for="sourceType0">Text</label>
@@ -39,8 +41,10 @@ published: true
                 <label for="sourceType36">36</label>
             </label>
         </div>
-        <textarea name="source"></textarea>
-        <div>
+        <div class="row">
+            <textarea name="source"></textarea>
+        </div>
+        <div class="row">
             <label>
                 <input type="radio" name="targetType" id="targetType2" value="2" checked />
                 <label for="targetType2">2</label>
@@ -66,8 +70,12 @@ published: true
                 <label for="targetType36">36</label>
             </label>
         </div>
-        <button type="button" name="convert">Convert</button>
-        <textarea name="target"></textarea>
+        <div class="row">
+            <button type="button" name="convert">Convert</button>
+        </div>
+        <div class="row">
+            <textarea name="target"></textarea>
+        </div>
     </form>
 </div>
 <script src="/js/page/decimal.js?v=0.1"></script>
