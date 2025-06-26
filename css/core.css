@@ -7,7 +7,7 @@
     --color-back: #FEFEFE;
     --size-radius: 4px;
     --size-space: 12px;
-    --size-space-min: 6px;
+    --size-space-min: 8px;
 }
 [data-theme='dark'] {
     --color-primary: #FEFEFE;
@@ -276,6 +276,9 @@ table th, table td, .table .th, .table .td {
 }
 .rows .row:last-child {
     margin-bottom: 0px;
+}
+.mainer {
+    margin: var(--size-space) 0px;
 }
 .wrap {
     margin: 0px auto;
