@@ -4,8 +4,8 @@ core.ready(() => {
     const formatTimestampObject = time.querySelector('span[name=formatTimestamp]');
     let timestampTask = setInterval(()=>onTimestampChange(), 1000);
     let onTimestampChange = () => {
-        const timestampValue = core.date.current();
-        currentTimestampObject.innerHTML = timestampValue;
-        formatTimestampObject.innerHTML = moment().millisecond(timestampValue).format('YYYY-MM-DD HH:mm:ss');
+        const moment = moment();
+        currentTimestampObject.innerHTML = moment.millisecond();
+        formatTimestampObject.innerHTML = moment.format('YYYY-MM-DD HH:mm:ss');
     };
 });
