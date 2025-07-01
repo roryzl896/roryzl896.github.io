@@ -1,5 +1,5 @@
 core.ready(() => {
-    const form = document.querySelector('.base64');
+    const form = document.querySelector('.url');
     const sourceInput = form.querySelector('textarea[name=source]');
     const targetInput = form.querySelector('textarea[name=target]');
     const encodeButton = form.querySelector('button[name=encode]');
@@ -11,7 +11,7 @@ core.ready(() => {
             return;
         }
         try {
-            targetInput.value = btoa(source);
+            targetInput.value = encodeURIComponent(source);
         } catch(e) {
             console.error('error', e);
             alert('Encode error');
@@ -24,7 +24,7 @@ core.ready(() => {
             return;
         }
         try {
-            targetInput.value = atob(source);
+            targetInput.value = decodeURIComponent(source);
         } catch(e) {
             console.error('error', e);
             alert('Decode error');
