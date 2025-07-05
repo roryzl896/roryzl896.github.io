@@ -19,8 +19,8 @@ core.ready(() => {
         try {
             const dividendValue = parseInt(dividend, 10);
             const divisorValue = parseInt(divisor, 10);
-            const quotient = dividendValue/divisorValue;
-            const remainder = dividendValue%divisorValue;
+            const quotient = Math.floor(dividendValue/divisorValue);
+            const remainder = Math.floor(dividendValue%divisorValue);
             quotientInput.value = quotient.toString();
             remainderInput.value = remainder.toString();
         } catch(e) {
