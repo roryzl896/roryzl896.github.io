@@ -1,5 +1,5 @@
 core.ready(() => {
-    const form = document.querySelector('.url');
+    const form = document.querySelector('.form');
     const sourceInput = form.querySelector('textarea[name=source]');
     const targetInput = form.querySelector('textarea[name=target]');
     const generateButton = form.querySelector('button[name=generate]');
